@@ -1,6 +1,13 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "strict": true,
+    "baseUrl": "src",
+    // autocomplete paths
+    "paths": {
+      "Components": ["src/Components"],
+      "Helpers": ["src/Helpers"],
+    }
+  },
+  "include": ["src"]
 }
