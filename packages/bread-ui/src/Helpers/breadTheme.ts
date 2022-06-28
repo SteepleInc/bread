@@ -1,5 +1,5 @@
 import { makeTheme } from 'dripsy'
-import { TextStyle, ViewStyle } from 'react-native'
+import { PressableStateCallbackType, TextStyle, ViewStyle } from 'react-native'
 import { ButtonBaseProps, ButtonVariants } from 'Components/Button'
 import { Icon, IconRenderer } from 'Components/Icon'
 
@@ -15,7 +15,11 @@ export type BreadThemeComponents = {
   button: {
     defaultProps: Partial<ButtonBaseProps>
     styleOverrides: Readonly<{
-      [Key in ButtonVariants]?: TextStyle | ViewStyle
+      [Key in ButtonVariants]?: (
+        params: PressableStateCallbackType & {
+          background: string
+        },
+      ) => TextStyle | ViewStyle
     }>
   }
   icon: {

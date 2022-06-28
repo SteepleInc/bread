@@ -12,8 +12,8 @@ export type ButtonBaseProps = {
   variant: ButtonVariants
   color: ColorBase
   disabled: boolean
-  EndIcon: ReactNode | BreadThemeComponents['icon']['iconNames']
   StartIcon: ReactNode | BreadThemeComponents['icon']['iconNames']
+  EndIcon: ReactNode | BreadThemeComponents['icon']['iconNames']
   fullWidth: boolean
   size: ButtonSize
 }
